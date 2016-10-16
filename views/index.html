@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Translate application</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"></link>
+    <script src="scripts.js" type="text/javascript"></script>
+  </head>
+  <body>
+  <div> <p>From : 
+  <select id="from_language">
+  <option value="FR">French</option>
+  <option value="EN">English</option>
+  <option value="ES">Spanish</option>
+</select>
+To :
+<select id="to_language">
+  <option value="FR">French</option>
+  <option value="EN">English</option>
+  <option value="ES">Spanish</option>
+</select> </p>
+ <p> <input type="text" value="Enter your text" />
+  <input type="button" value="Translate" onclick="translateText()"/>
+  <span id="translated_text"></span></p>
+ 
+  </body>
+</html>

@@ -1,0 +1,20 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+		div#translate_text
+			- languages = [["en","English"], ["fr", "French"], ["es", "Spanish"]]
+				span From : 
+				select#from_language(name="from_language")
+					each lg in languages
+						option(value=lg[0]) #{lg[1]}
+				span To : 
+				select#to_language(name="to_language")
+					each lg in languages
+						option(value=lg[0]) #{lg[1]}
+				input#text_to_translate(type='text', placeholder='Enter your text' name="text")
+				button#translate_button Translate
+				br
+				
+				span#translated_text
