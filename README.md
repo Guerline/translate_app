@@ -30,3 +30,10 @@ cd translate-app
 ```
 npm install
 ```
+
+### Running the app
+Now you can start the app by running the app.js file.
+
+```
+node app.js
+```
