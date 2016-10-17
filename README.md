@@ -34,22 +34,24 @@ npm install
 
 ### Running the app
 First, you will have to create the database.
-Go to the bin directory where mongodb is installed. Run the mongo deamon mongod for our database.
+Go to the bin directory inside the directory where MongoDB is installed. Run the mongo deamon mongod for our database.
 Open a command prompt and type :
 
 ```
 mongod --dbpath <direname>\translate_app\data\
 ```
 
-Open another  command prompt and type :
+Open another  command prompt in the sa,e directory and type :
 ```
 mongo
 ```
 
 In the mongo console that is now open, type : 
 ```
-use translate_db
-db.translated_texts.insert({text : "Hello", from_language:"en", to_language : "fr", translated_text:"Bonjour"})
+>use translate_db
+```
+```
+>db.translated_texts.insert({text : "Hello", from_language:"en", to_language : "fr", translated_text:"Bonjour"})
 ```
 
 Now you can start the app by going back to your node command prompt and running the app.js file.
@@ -57,3 +59,5 @@ Now you can start the app by going back to your node command prompt and running 
 ```
 node app.js
 ```
+
+To use this app, open your favorite brozser and go to http://localhost:3000
