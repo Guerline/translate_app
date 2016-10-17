@@ -27,13 +27,32 @@ cd translate-app
 
 
 * We get the tools we depend upon via `npm`, the [node package manager][npm]
-
+Open your node command prompt and type : 
 ```
 npm install
 ```
 
 ### Running the app
-Now you can start the app by running the app.js file.
+First, you will have to create the database.
+Go to the bin directory where mongodb is installed. Run the mongo deamon mongod for our database.
+Open a command prompt and type :
+
+```
+mongod --dbpath <direname>\translate_app\data\
+```
+
+Open another  command prompt and type :
+```
+mongo
+```
+
+In the mongo console that is now open, type : 
+```
+use translate_db
+db.translated_texts.insert({text : "Hello", from_language:"en", to_language : "fr", translated_text:"Bonjour"})
+```
+
+Now you can start the app by going back to your node command prompt and running the app.js file.
 
 ```
 node app.js
